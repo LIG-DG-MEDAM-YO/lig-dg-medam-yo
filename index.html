@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>LIG DG Medam Yo</title>
+  <title>LIGUE DG MEDAM YO</title>
 
   <style>
     body {
@@ -17,16 +17,16 @@
       background: #1455d9;
       color: white;
       text-align: center;
-      padding: 30px 15px;
+      padding: 35px 15px;
     }
 
     header h1 {
       margin: 0;
-      font-size: 30px;
+      font-size: 32px;
     }
 
     header p {
-      font-size: 16px;
+      font-size: 17px;
     }
 
     .country {
@@ -78,15 +78,15 @@
 <body>
 
   <header>
-    <h1>🏆 LIG DG Medam Yo</h1>
-    <p>Bienvenido a la aplicación de la LIG DG Medam Yo</p>
-    <div class="country">🇭🇹 Haiti</div>
+    <h1>🏆 LIGUE DG MEDAM YO</h1>
+    <p>Bienvenue sur l'application de la Ligue DG Medam Yo</p>
+    <div class="country">🇭🇹 Haïti</div>
   </header>
 
   <div class="menu">
 
-    <div class="button" onclick="showSection('clasificacion')">
-      🏆 Clasificación
+    <div class="button" onclick="showSection('classement')">
+      🏆 Classement
     </div>
 
     <div class="button" onclick="showSection('participantes')">
@@ -97,8 +97,8 @@
       ⚔️ Challenges
     </div>
 
-    <div class="button" onclick="showSection('resultados')">
-      📊 Resultados
+    <div class="button" onclick="showSection('resultats')">
+      📊 Résultats
     </div>
 
   </div>
@@ -115,7 +115,7 @@
   </div>
 
   <footer>
-    LIG DG Medam Yo © 2026
+    LIGUE DG MEDAM YO © 2026
   </footer>
 
   <script>
@@ -123,12 +123,12 @@
 
       let content = document.getElementById("content");
 
-      if (section === "clasificacion") {
+      if (section === "classement") {
         content.innerHTML = `
-          <h2>🏆 Clasificación</h2>
+          <h2>🏆 Classement</h2>
           <ol>
-            <li>Camie — 0 puntos</li>
-            <li>Manunu — 0 puntos</li>
+            <li>Camie — 0 points</li>
+            <li>Manunu — 0 points</li>
           </ol>
         `;
       }
@@ -146,14 +146,14 @@
       if (section === "challenges") {
         content.innerHTML = `
           <h2>⚔️ Challenges</h2>
-          <p>Los challenges de la LIG DG Medam Yo aparecerán aquí.</p>
+          <p>Les challenges de la LIGUE DG MEDAM YO apparaîtront ici.</p>
         `;
       }
 
-      if (section === "resultados") {
+      if (section === "resultats") {
         content.innerHTML = `
-          <h2>📊 Resultados</h2>
-          <p>Los resultados de la competencia aparecerán aquí.</p>
+          <h2>📊 Résultats</h2>
+          <p>Les résultats de la compétition apparaîtront ici.</p>
         `;
       }
     }
