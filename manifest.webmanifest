@@ -2,7 +2,7 @@
   "name": "LIGUE DG MEDAM YO",
   "short_name": "LIGUE DG",
   "description": "Application officielle de la LIGUE DG MEDAM YO, Haïti.",
-  "start_url": "./",
+  "start_url": "/lig-dg-medam-yo/",
   "display": "standalone",
   "background_color": "#f2f5ff",
   "theme_color": "#1455d9",
