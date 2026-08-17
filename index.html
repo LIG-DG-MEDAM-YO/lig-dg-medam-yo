@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LIG DG Medam Yo</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f2f5ff;
+      color: #222;
+    }
+
+    header {
+      background: #1455d9;
+      color: white;
+      text-align: center;
+      padding: 30px 15px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 30px;
+    }
+
+    header p {
+      font-size: 16px;
+    }
+
+    .country {
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .menu {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+      padding: 20px;
+    }
+
+    .button {
+      background: white;
+      border-radius: 15px;
+      padding: 20px 10px;
+      text-align: center;
+      font-size: 17px;
+      font-weight: bold;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.12);
+      cursor: pointer;
+    }
+
+    .content {
+      background: white;
+      margin: 0 20px 25px;
+      padding: 20px;
+      border-radius: 15px;
+    }
+
+    .content h2 {
+      color: #1455d9;
+    }
+
+    li {
+      margin: 10px 0;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #666;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>🏆 LIG DG Medam Yo</h1>
+    <p>Bienvenido a la aplicación de la LIG DG Medam Yo</p>
+    <div class="country">🇭🇹 Haiti</div>
+  </header>
+
+  <div class="menu">
+
+    <div class="button" onclick="showSection('clasificacion')">
+      🏆 Clasificación
+    </div>
+
+    <div class="button" onclick="showSection('participantes')">
+      👑 Participantes
+    </div>
+
+    <div class="button" onclick="showSection('challenges')">
+      ⚔️ Challenges
+    </div>
+
+    <div class="button" onclick="showSection('resultados')">
+      📊 Resultados
+    </div>
+
+  </div>
+
+  <div class="content" id="content">
+
+    <h2>👑 Participantes</h2>
+
+    <ol>
+      <li>Camie</li>
+      <li>Manunu</li>
+    </ol>
+
+  </div>
+
+  <footer>
+    LIG DG Medam Yo © 2026
+  </footer>
+
+  <script>
+    function showSection(section) {
+
+      let content = document.getElementById("content");
+
+      if (section === "clasificacion") {
+        content.innerHTML = `
+          <h2>🏆 Clasificación</h2>
+          <ol>
+            <li>Camie — 0 puntos</li>
+            <li>Manunu — 0 puntos</li>
+          </ol>
+        `;
+      }
+
+      if (section === "participantes") {
+        content.innerHTML = `
+          <h2>👑 Participantes</h2>
+          <ol>
+            <li>Camie</li>
+            <li>Manunu</li>
+          </ol>
+        `;
+      }
+
+      if (section === "challenges") {
+        content.innerHTML = `
+          <h2>⚔️ Challenges</h2>
+          <p>Los challenges de la LIG DG Medam Yo aparecerán aquí.</p>
+        `;
+      }
+
+      if (section === "resultados") {
+        content.innerHTML = `
+          <h2>📊 Resultados</h2>
+          <p>Los resultados de la competencia aparecerán aquí.</p>
+        `;
+      }
+    }
+  </script>
+
+</body>
+</html>
