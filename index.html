@@ -1,168 +1,124 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="ht">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>LIGUE DG MEDAM YO</title>
-<link rel="manifest" href="manifest.webmanifest">
-<meta name="theme-color" content="#1455d9">
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background: #f2f5ff;
-      color: #222;
-    }
-
-    header {
-      background: #1455d9;
-      color: white;
-      text-align: center;
-      padding: 35px 15px;
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 32px;
-    }
-
-    header p {
-      font-size: 17px;
-    }
-
-    .country {
-      font-size: 20px;
-      font-weight: bold;
-    }
-
-    .menu {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 15px;
-      padding: 20px;
-    }
-
-    .button {
-      background: white;
-      border-radius: 15px;
-      padding: 20px 10px;
-      text-align: center;
-      font-size: 17px;
-      font-weight: bold;
-      box-shadow: 0 3px 10px rgba(0,0,0,0.12);
-      cursor: pointer;
-    }
-
-    .content {
-      background: white;
-      margin: 0 20px 25px;
-      padding: 20px;
-      border-radius: 15px;
-    }
-
-    .content h2 {
-      color: #1455d9;
-    }
-
-    li {
-      margin: 10px 0;
-    }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-      color: #666;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>LIGUE DG MEDAM YO</title>
+<style>
+body{margin:0;font-family:Arial,sans-serif;background:#090711;color:white}
+header{padding:30px 15px;text-align:center;background:linear-gradient(135deg,#170a2a,#65145e,#2a0b50);border-bottom:2px solid #ffd45a}
+h1{margin:0;font-size:32px}header p{color:#f4dfff}
+.menu{display:grid;grid-template-columns:1fr 1fr;gap:12px;padding:16px}
+button{padding:15px 8px;border:0;border-radius:14px;background:#29163f;color:white;font-weight:bold;font-size:15px}
+button.active{background:linear-gradient(135deg,#7b2cff,#ff2bb5)}
+.content{margin:0 14px 25px;padding:16px;background:#151022;border-radius:18px}
+h2{color:#ffd45a}
+table{width:100%;border-collapse:separate;border-spacing:0 7px}
+th{font-size:12px;text-align:left;color:#cfc5dc}
+td{padding:11px 7px;background:#21192d}
+td:first-child{color:#ffd45a;font-weight:bold}
+.name{font-weight:bold}.points{color:#70f0ff;font-weight:bold}.gifts{color:#ff8ddd;font-weight:bold}
+.person{display:flex;align-items:center;gap:12px;padding:12px;margin:8px 0;background:#21192d;border-radius:13px}
+.num{color:#ffd45a;font-weight:bold}.avatar{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(135deg,#ffd45a,#ff2bb5);color:#160b1c;font-weight:bold}
+.note{font-size:13px;color:#aaa0b5}footer{text-align:center;color:#999;padding:20px}
+</style>
 </head>
-
 <body>
 
-  <header>
-    <h1>🏆 LIGUE DG MEDAM YO</h1>
-    <p>Bienvenue sur l'application de la Ligue DG Medam Yo</p>
-    <div class="country">🇭🇹 Haïti</div>
-  </header>
+<header>
+<h1>👑 LIGUE DG MEDAM YO</h1>
+<p>Championnat TikTok</p>
+<strong>🏆 Pwen chanpyona + 🎁 Kado TikTok</strong>
+</header>
 
-  <div class="menu">
+<div class="menu">
+<button id="b-classement" onclick="show('classement')">🏆 Klasman</button>
+<button id="b-participantes" onclick="show('participantes')">👑 Patisipan</button>
+<button id="b-challenges" onclick="show('challenges')">⚔️ Challenges</button>
+<button id="b-resultats" onclick="show('resultats')">📊 Rezilta</button>
+</div>
 
-    <div class="button" onclick="showSection('classement')">
-      🏆 Classement
-    </div>
+<div class="content" id="content"></div>
+<footer>LIGUE DG MEDAM YO © 2026</footer>
 
-    <div class="button" onclick="showSection('participantes')">
-      👑 Participantes
-    </div>
-
-    <div class="button" onclick="showSection('challenges')">
-      ⚔️ Challenges
-    </div>
-
-    <div class="button" onclick="showSection('resultats')">
-      📊 Résultats
-    </div>
-
-  </div>
-
-  <div class="content" id="content">
-
-    <h2>👑 Participantes</h2>
-
-    <ol>
-      <li>Camie</li>
-      <li>Manunu</li>
-    </ol>
-
-  </div>
-
-  <footer>
-    LIGUE DG MEDAM YO © 2026
-  </footer>
-
-  <script>
-    function showSection(section) {
-
-      let content = document.getElementById("content");
-
-      if (section === "classement") {
-  content.innerHTML = `
-    <h2>🏆 Classement</h2>
-    <ol>
-      <li>Camie — 0 points</li>
-      <li>Manunu — 0 points</li>
-    </ol>
-  `;
-      }
-
-      if (section === "participantes") {
-        content.innerHTML = `
-          <h2>👑 Participantes</h2>
-          <ol>
-            <li>Camie</li>
-            <li>Manunu</li>
-          </ol>
-        `;
-      }
-
-      if (section === "challenges") {
-        content.innerHTML = `
-          <h2>⚔️ Challenges</h2>
-          <p>Les challenges de la LIGUE DG MEDAM YO apparaîtront ici.</p>
-        `;
-      }
-
-      if (section === "resultats") {
-        content.innerHTML = `
-          <h2>📊 Résultats</h2>
-          <p>Les résultats de la compétition apparaîtront ici.</p>
-        `;
-      }
-    }
-  </script>
 <script>
-if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('./sw.js');
+const medam=[
+["Sendy",3,"88K"],
+["Paul Mirguerlande",3,"60K"],
+["Camie",3,"46K"],
+["Queen la Rebelle",3,"31K"],
+["Leeyoo",3,"18K400"],
+["Tayou",3,"16K200"],
+["Teekah",3,"15K600"],
+["Belineda",0,"7K30"],
+["Black Queen",0,"34K250"],
+["Queen Lincey",0,"6K"],
+["Mystie",0,"1K60"],
+["Dachou",0,"00"],
+["La Rosa",0,"3K150"],
+["Manunu",0,"9K860"],
+["Anastasia",0,"00"],
+["Queen Chrisou",0,"19K200"]
+];
+
+function active(x){
+document.querySelectorAll("button").forEach(b=>b.classList.remove("active"));
+document.getElementById("b-"+x).classList.add("active");
 }
+
+function show(x){
+active(x);
+let c=document.getElementById("content");
+
+if(x=="classement"){
+c.innerHTML=`
+<h2>🏆 Klasman — LIGUE DG MEDAM YO</h2>
+<table>
+<tr><th>#</th><th>Medam</th><th>🏆 Pwen</th><th>🎁 Kado</th></tr>
+${medam.map((m,i)=>`
+<tr>
+<td>${i+1}</td>
+<td class="name">${m[0]}</td>
+<td class="points">${m[1]}</td>
+<td class="gifts">${m[2]}</td>
+</tr>`).join("")}
+</table>
+<p class="note">🏆 Pwen yo se pwen chanpyona. 🎁 Kado yo se kado TikTok; yo pa ranplase pwen chanpyona yo.</p>`;
+}
+
+if(x=="participantes"){
+c.innerHTML="<h2>👑 16 Patisipan</h2>"+
+medam.map((m,i)=>`
+<div class="person">
+<span class="num">${i+1}</span>
+<span class="avatar">${m[0][0]}</span>
+<strong>${m[0]}</strong>
+</div>`).join("");
+}
+
+if(x=="challenges"){
+c.innerHTML=`
+<h2>⚔️ Challenges</h2>
+<p class="note">Match ak challenges yo ap parèt isit la.</p>`;
+}
+
+if(x=="resultats"){
+c.innerHTML=`
+<h2>📊 Rezilta</h2>
+<table>
+<tr><th>Medam</th><th>🏆 Pwen</th><th>🎁 Kado</th></tr>
+${medam.map(m=>`
+<tr>
+<td class="name">${m[0]}</td>
+<td class="points">${m[1]}</td>
+<td class="gifts">${m[2]}</td>
+</tr>`).join("")}
+</table>`;
+}
+}
+
+show("classement");
 </script>
+
 </body>
 </html>
