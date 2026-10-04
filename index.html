@@ -60,7 +60,12 @@ const medam=[
 ["Anastasia",0,"00"],
 ["Queen Chrisou",0,"19K200"]
 ];
-
+const gayanJodi=[
+["Dachou","11K100"],
+["Paul Mirguerlande","31K400"],
+["Mystie","18K100"],
+["Camie","11K200"]
+];
 function active(x){
 document.querySelectorAll("button").forEach(b=>b.classList.remove("active"));
 document.getElementById("b-"+x).classList.add("active");
@@ -82,7 +87,15 @@ ${medam.map((m,i)=>`
 <td class="points">${m[1]}</td>
 <td class="gifts">${m[2]}</td>
 </tr>`).join("")}
-</table>
+</table><div class="today">
+<h3>🏆 Gayan Jodi a — 04 Oktòb 2026</h3>
+${gayanJodi.map(m=>`
+<div class="today-row">
+<span class="winner">${m[0]}</span>
+<span>🎁 ${m[1]}</span>
+</div>
+`).join("")}
+</div>
 <p class="note">🏆 Pwen yo se pwen chanpyona. 🎁 Kado yo se kado TikTok; yo pa ranplase pwen chanpyona yo.</p>`;
 }
 
