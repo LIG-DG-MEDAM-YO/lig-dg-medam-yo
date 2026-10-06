@@ -101,6 +101,11 @@ td:first-child{
   font-weight:bold;
 }
 
+.lose{
+  color:#ff6b9d;
+  font-weight:bold;
+}
+
 .person{
   display:flex;
   align-items:center;
@@ -149,6 +154,11 @@ td:first-child{
   font-weight:bold;
 }
 
+.loser{
+  color:#ff6b9d;
+  font-weight:bold;
+}
+
 .note{
   font-size:13px;
   color:#aaa0b5;
@@ -167,7 +177,7 @@ footer{
 <header>
   <h1>👑 LIGUE DG MEDAM YO</h1>
   <p>Championnat TikTok</p>
-  <strong>🏆 Pwen chanpyona + 🎁 Kado TikTok</strong>
+  <strong>🏆 Pwen chanpyona + 🎁 Kado TikTok + 💥 Lifè</strong>
 </header>
 
 <div class="menu">
@@ -251,6 +261,29 @@ const gayanJodi = [
   ["Leeyoo","13K200"],
 
   ["Sendy","100K"]
+
+];
+
+
+/* =========================
+   REZILTA LIFÈ
+   ========================= */
+
+const lifere = [
+
+  ["La Rosa","7K500"],
+
+  ["Queen Lincey","7K550"],
+
+  ["Queen Chrisou","2K"],
+
+  ["Queen la Rebelle","11K800"],
+
+  ["Tayou","200"],
+
+  ["Anastasia","11K800"],
+
+  ["Belineda","740"]
 
 ];
 
@@ -351,11 +384,37 @@ function show(x){
       </div>
 
 
+      <div class="today">
+
+        <h3>
+          💥 Rezilta Lifè — 06 Oktòb 2026
+        </h3>
+
+        ${lifere.map(m => `
+
+          <div class="today-row">
+
+            <span class="loser">
+              ${m[0]}
+            </span>
+
+            <span>
+              ❌ Pèdi Lifè — ${m[1]}
+            </span>
+
+          </div>
+
+        `).join("")}
+
+      </div>
+
+
       <p class="note">
 
         🏆 Pwen yo se pwen chanpyona.
         🎁 Kado yo se kado TikTok.
-        Kado yo pa ranplase pwen chanpyona yo.
+        💥 Lifè yo montre rezilta match Lifè yo.
+        Kado ak Lifè pa ranplase pwen chanpyona yo.
 
       </p>
 
@@ -454,6 +513,31 @@ function show(x){
         `).join("")}
 
       </table>
+
+
+      <div class="today">
+
+        <h3>
+          💥 Rezilta Lifè — 06 Oktòb 2026
+        </h3>
+
+        ${lifere.map(m => `
+
+          <div class="today-row">
+
+            <span class="loser">
+              ${m[0]}
+            </span>
+
+            <span>
+              ❌ ${m[1]}
+            </span>
+
+          </div>
+
+        `).join("")}
+
+      </div>
 
     `;
   }
